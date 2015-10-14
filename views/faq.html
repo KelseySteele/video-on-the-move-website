@@ -3,9 +3,14 @@
 <head>
 <title>Vazzt Video-On-The-Move FAQ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified Bootstrap CSS fill from Bootswatch's Cyborg theme -->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+
 <!-- Bootstrap -->
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -36,19 +41,18 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="overview.html">Overview<span class="sr-only">(current)</span></a></li>
+        <li><a href="overview.html">Overview<span class="sr-only">(current)</span></a></li>
         <li><a href="instructions.html">Instructions</a></li>
-        <li class="dropdown">
+        <li class="dropdown active">
             <a href="faq.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAQ<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
+                <ul class="dropdown-menu">
+                    <li><a href="views/faq.html">General</a></li>
+                    <li><a href="views/faq.html">3G & 4G Networks</a></li>
+                    <li><a href="views/faq.html">Equipment Options</a></li>
+                    <li><a href="views/faq.html">Using Equipment</a></li>
+                    <li><a href="views/faq.html">KenCast Services</a></li>
+                    <li><a href="views/faq.html">Miscellaneous</a></li>
+                </ul>
         </li>
         <li><a href="checklist.html">Checklist</a></li>
       </ul>
@@ -60,8 +64,7 @@
 
 <!--jumbotron-->
 <div class="jumbotron">
-  <h1>FAQ Jumbotron</h1> 
-  <p>This page will grow as we add more and more components from Bootstrap...</p>
+  <img src="../img/camcorder.jpg" alt="camcorder">
 </div>
 
 <div class="container" ng-app="faqApp" ng-controller="faqCtrl">

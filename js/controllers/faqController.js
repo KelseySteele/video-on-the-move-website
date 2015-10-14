@@ -4,7 +4,7 @@ angular.module('faqApp', ['ngSanitize']).controller('faqCtrl', function($scope) 
         category: 'general',
         number: '1',
         question: 'What is Vazzt Video-On-The-Move?',
-        answer: "<p>KenCast\'s Vazzt Video-On-The-Move makes it easy to capture high quality live video from vehicles, aircrafts, cars, and from on foot.Vazzt then distributes the live content from a central hub to users on the intent or on a private network.</p>"
+        answer: "<p>KenCast\'s Vazzt Video-On-The-Move makes it easy to capture high quality live video from vehicles, aircrafts, cars, and from on foot.Vazzt then distributes the live content from a central hub to users on the intenet or on a private network.</p>"
         },
         {
         category: 'general',

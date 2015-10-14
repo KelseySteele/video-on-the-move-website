@@ -1,0 +1,25 @@
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+
+.jumbotron {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
+
+.jumbotron img{
+    width: 100%; /*img width*/
+}
+
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
