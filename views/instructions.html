@@ -4,8 +4,13 @@
 <title>Vazzt Video-On-The-Move FAQ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Bootstrap -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- Latest compiled and minified Bootstrap CSS fill from Bootswatch's Cyborg theme -->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Latest compiled and minified Bootstrap CSS fill from Bootswatch's Cyborg theme -->
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -15,6 +20,9 @@
 
 <!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+<!-- AngularJS: sanitize -->
+<script src=http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js></script>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -27,27 +35,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">KenCast VAZZT</a>
+      <a class="navbar-brand" href="index.html">KenCast VAZZT</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="overview.html">Overview<span class="sr-only">(current)</span></a></li>
-        <li><a href="instructions.html">Instructions</a></li>
+        <li><a href="views/overview.html">Overview<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="views/instructions.html">Instructions</a></li>
         <li class="dropdown">
-            <a href="faq.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAQ<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
+            <a href="views/faq.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAQ<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="views/faq.html">General</a></li>
+                    <li><a href="views/faq.html">3G & 4G Networks</a></li>
+                    <li><a href="views/faq.html">Equipment Options</a></li>
+                    <li><a href="views/faq.html">Using Equipment</a></li>
+                    <li><a href="views/faq.html">KenCast Services</a></li>
+                    <li><a href="views/faq.html">Miscellaneous</a></li>
+                </ul>
         </li>
-        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="views/checklist.html">Checklist</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       </ul><!-- /.navbar-nav -->
@@ -55,19 +62,52 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-  <div class="container">
-    <h2>Instructions</h2>
-    <div class="box">
+<div ng-app= "instructionsApp">
+  <div ng-controller="instructionsCtrl as ictrl">
+       <div class="container instRelative">
+
+    <div class="box col-md-3 col-sm-12 col-xs-12">
       <h3>Prepare</h3>
-      
+          <div ng-repeat="step in ictrl.steps">
+              <button ng-click= "ictrl.showDetails(step.id)" class= "btn btn-default btn-lg instructionsBtn">{{step.name}}</button>
+          </div>
     </div>
     
-    
-    
-  </div>
-  
+    <div class= "col-md-1 col-sm-1">
+    </div>
 
-<script src="../controllers/faqController.js"></script>
+    <div class="box col-md-3 col-sm-12 col-xs-12">
+      <h3>Setup</h3>
+          <button class= "btn btn-primary btn-lg attachCameraBtn instructionsBtn">Attach Camera</button>
+          <button class= "btn btn-primary btn-lg instructionsBtn">Launch VazztCaster</button>
+
+    </div>
+    
+    <div class= "col-md-1 col-sm-1">
+    </div>
+    
+    <div class="box col-md-3 col-sm-12 col-xs-12">
+      <h3>Broadcast</h3>
+              <button class= "btn btn-success btn-lg instructionsBtn">Start Broadcasting</button>
+              <button class= "btn btn-success btn-lg instructionsBtn">Stop Broadcasting</button>
+              <button class= "btn btn-success btn-lg viewBroadcastBtn">View Broadcast</button>
+    </div>
+    </div>
+ 
+    <!--Overlay divs for each button-->
+    
+        <div ng-show= "ictrl.showValue" class="instAbsolute col-xs-12 col-md-10 ng-cloak">
+            <span class= "glyphicon glyphicon-remove pull-right" ng-click = "ictrl.hideDetails()"></span>
+            <h4 class = "text-muted" >{{ictrl.step}}</h4>
+            <h1 class = "text-grey">{{ictrl.name}}</h1>
+            <div ng-bind-html="ictrl.description">
+            </div>
+
+        </div> 
+       </div> <!--end of controller -->
+    </div> <!--end of app -->
+
+<script src="../js/controllers/instructionController.js"></script>
 
 
 </body>

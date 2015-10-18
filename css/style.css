@@ -1,4 +1,71 @@
 
+.text-white {
+  color: white;
+}
+
+
+
+/*-- Instructions Page ---*/
+
+.instRelative {
+  position: relative;
+}
+
+
+.instAbsolute {
+  /*--Pop Up Window--*/
+  position: absolute;
+  top: 80px;
+  left: 73px;
+  margin-right: -70px;
+  background: white;
+  opacity: 0.9;
+  z-index: 10;
+  padding: 20px;
+}
+
+.popUpText {
+  font-size: 18px;
+}
+
+.text-grey {
+  color: #666;
+}
+
+.box {
+  background-color: #666;
+  margin: 15px 5px;
+  height: 500px;
+  text-align: center;
+}
+
+.instructionsBtn{
+  margin: 20px 10px;
+  width: 75%;
+  padding: 5px 10px;
+  white-space: normal;
+}
+
+.viewBroadcastBtn {
+  margin-top: 130px;
+  width: 200px;
+  width: 75%;
+  padding: 5px 10px;
+  white-space: normal;
+}
+
+.attachCameraBtn {
+  margin-top: 80px;
+}
+
+.glyphicon-arrow-right {
+    font-size: 50px;
+    margin-top: 170px;
+}
+
+
+/*-- Slideshow on homepage ---*/
+
 .carousel .item {
     width: 100%; /*slider width*/
     max-height: 600px; /*slider height*/
@@ -22,4 +89,12 @@
         margin-left: -20px;
         margin-right: -20px;
     }
+}
+
+/* mobile device */
+@media only screen and (max-device-width: 480px) {
+    .instAbsolute{
+        left: 0;
+    }
+
 }
