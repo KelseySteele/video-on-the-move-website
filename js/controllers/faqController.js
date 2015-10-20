@@ -216,6 +216,18 @@ angular.module('faqApp', ['ngSanitize']).controller('faqCtrl', function($scope) 
         number: '8',
         question: 'Why the name Vazzt VOTM?',
         answer: "<p>One of the keys to successful video capture over IP networks is to find enough bandwidth at a moments notice and keep it while on the move.  KenCast’s solution does it well and in fact typically finds a VAST (Vazzt) amount of bandwidth for you.  And KenCast’s solution is targeted to video capture by those on location, especially on the move in vehicles, aircraft or on foot.  So we dubbed it Vazzt Video-On-The-Move (VOTM).  </p>"
+        },
+        {
+        category: 'equipment',
+        number: '9',
+        question: 'What kind of camera do I need?',
+        answer: '<p>Vazzt will work with almost any camera on the market, with analog or digital output.  You can use an HD pro camera with SDI output, a prosumer camera with HDMI output, a DV camcorder, an external web cam (e.g., Logitech), or even the internal webcam in your netbook (it works fine).  The quality of the video will vary with the quality of the camera.  At the upper extreme is an HD pro camera with live output to a laptop, in which case the camera setup can get very expensive, as well as more complex – but it works well with Vazzt. </p>'
+        },
+        {
+        category: 'equipment',
+        number: '10',
+        question: 'How do I attach my camera to my laptop?',
+        answer: '<p>There are many ways to attach you camera to your laptop.  For digital camera output, we recommend connecting the camera with a wire to the faster firewire port – but the USB port will also work.  As an example, for analog camera output you can use an external capture device (such as the Dazzle from Pinnacle) with a 3-port composite connector into the camera and a USB connection on the other end of the cable into the laptop.  Also, there are many ways to interface a camera to an internal video capture card.  See illustrations below: </p>'
         }
     ];
     
