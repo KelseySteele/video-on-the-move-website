@@ -59,6 +59,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
 <div ng-app= "instructionsApp">
   <div ng-controller="instructionsCtrl as ictrl">
        <div class="container instRelative">
@@ -100,7 +101,12 @@
             <h1 class = "text-grey">{{ictrl.name}}</h1>
             <div ng-bind-html="ictrl.description">
             </div>
-              <img class= "img-responsive" ng-src="{ictrl.figure}" alt="{{ictrl.alt}}">
+            <span class="figure">
+            <figure>
+              <figcaption class="figureCaption" ng-show="ictrl.imageCaption" ng-bind="ictrl.imageCaption"></figcaption>
+              <img class= "img-responsive" ng-src="{{ictrl.figure}}" ng-show="ictrl.figure" ng-bind="ictrl.figure" alt="{{ictrl.alt}}">
+            </figure>
+            </span>
         </div> 
        </div> <!--end of controller -->
     </div> <!--end of app -->
